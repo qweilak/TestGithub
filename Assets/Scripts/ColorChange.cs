@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class ColorChange : MonoBehaviour
 {
-    SpriteRenderer _sp;
+    [SerializeField] SpriteRenderer _sp;
     void Start()
     {
-        _sp.GetComponent<SpriteRenderer>();
         _sp.color = Color.white;
     }
 
@@ -16,7 +15,7 @@ public class ColorChange : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
             _sp.color = Color.white;
-        else if (Input.GetKeyDown(KeyCode.Alpha0))
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
                 _sp.color = Color.red;
         else if (Input.GetKeyDown(KeyCode.Alpha3))
             _sp.color = Color.green;
